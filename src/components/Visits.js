@@ -16,15 +16,6 @@ import TableSortLabel from '@material-ui/core/TableSortLabel';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
-const createData = (datetime, device, ip) => ({
-  datetime, device, ip
-});
-
-const rows = [
-  createData('Date 123', 'POCOPHONE F1', '192.168.254.254.'),
-  createData('Date 321', 'IPHONE X', '192.168.254.254.'),
-];
-
 const desc = (a, b, orderBy) => {
   if (b[orderBy] < a[orderBy]) {
     return -1;
