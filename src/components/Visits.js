@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { gql } from 'apollo-boost';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
+import moment from 'moment';
 
 import client from '../graphql-client';
 
@@ -235,7 +236,7 @@ export default function EnhancedTable() {
                     key={row.ip}
                   >
                     <TableCell component="th" id={labelId} scope="row" padding="none">
-                      {row.datetime}
+                      {moment(row.datetime).format('LLL')}
                     </TableCell>
                     <TableCell>{row.device}</TableCell>
                     <TableCell>{row.ip}</TableCell>
